@@ -1,6 +1,7 @@
 import transformers
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
+from mpi4py import MPI
 
 tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
 models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]

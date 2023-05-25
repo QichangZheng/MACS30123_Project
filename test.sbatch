@@ -13,3 +13,5 @@
 module load python/anaconda-2019.03
 module load intelmpi/2019.up7+intel-19.1.1
 module load cuda
+
+mpirun -n 2 python3 test.py > test.out
