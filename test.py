@@ -28,6 +28,7 @@ def get_score(text):
             scores.append(1 - result[0]['score'])
     return scores
 
+print(get_score('sdf'))
 print(6)
 
 
