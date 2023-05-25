@@ -3,6 +3,7 @@ import transformers
 print(2)
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 print(3)
+import torch
 from mpi4py import MPI
 print(4)
 

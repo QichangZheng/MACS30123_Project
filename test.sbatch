@@ -10,6 +10,7 @@
 #module load python/anaconda-2019.03
 #module load python/anaconda-2021.05
 module load pytorch/1.2
+tensorflow/2.1
 #module load cuda
 module load intelmpi/2018.2.199+intel-18.0
 
