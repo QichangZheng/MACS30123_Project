@@ -1,7 +1,7 @@
 print(1)
-import transformers
+# import transformers
 print(2)
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
+# from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 print(3)
 from mpi4py import MPI
 print(4)
