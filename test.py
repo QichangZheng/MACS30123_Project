@@ -6,15 +6,15 @@ print(3)
 from mpi4py import MPI
 print(4)
 
-tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
-models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]
+
 Models = [
     'uer/roberta-base-finetuned-jd-binary-chinese',
     'uer/roberta-base-finetuned-dianping-chinese',
     'philschmid/distilbert-base-multilingual-cased-sentiment',
     'philschmid/distilbert-base-multilingual-cased-sentiment-2',
 ]
-
+tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
+models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]
 nlps = [pipeline('sentiment-analysis', model=model_name) for model_name in Models]
 print(5)
 # def get_score(text):
