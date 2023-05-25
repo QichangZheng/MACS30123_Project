@@ -4,6 +4,7 @@ print(2)
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 print(3)
 from mpi4py import MPI
+print(4)
 
 tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
 models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]
@@ -15,17 +16,18 @@ Models = [
 ]
 
 nlps = [pipeline('sentiment-analysis', model=model_name) for model_name in Models]
-def get_score(text):
-    scores = []
-    results = [nlp(text) for nlp in nlps]
-    for result in results:
-        if result[0]['label'] == 'positive (stars 4 and 5)' or result[0]['label'] == 'positive':
-            scores.append(result[0]['score'])
-        else:
-            scores.append(1 - result[0]['score'])
-    return scores
+print(5)
+# def get_score(text):
+#     scores = []
+#     results = [nlp(text) for nlp in nlps]
+#     for result in results:
+#         if result[0]['label'] == 'positive (stars 4 and 5)' or result[0]['label'] == 'positive':
+#             scores.append(result[0]['score'])
+#         else:
+#             scores.append(1 - result[0]['score'])
+#     return scores
 
-
+print(6)
 
 
 
@@ -43,6 +45,6 @@ def get_score(text):
 #             sentiment_scores.extend(probabilities.tolist())
 #     return [round(num, 3) for num in sentiment_scores]
 
-print(get_score('sdf'))
-
-print(111)
+# print(get_score('sdf'))
+#
+# print(111)
