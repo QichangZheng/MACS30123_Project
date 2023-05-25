@@ -24,3 +24,5 @@ def get_score(text):
     return [round(num, 3) for num in sentiment_scores]
 
 print(get_score('sdf'))
+
+print(111)
