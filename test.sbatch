@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=test
 #SBATCH --output=test.out
-#SBATCH --ntasks=10
+#SBATCH --ntasks=2
 #SBATCH --partition=broadwl
 #SBATCH --constraint=fdr
 #SBATCH --account=macs30123
