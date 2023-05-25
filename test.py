@@ -13,9 +13,9 @@ Models = [
     'philschmid/distilbert-base-multilingual-cased-sentiment',
     'philschmid/distilbert-base-multilingual-cased-sentiment-2',
 ]
-tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
-models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]
-nlps = [pipeline('sentiment-analysis', model=model_name) for model_name in Models]
+# tokenizers = [AutoTokenizer.from_pretrained(model_name) for model_name in Models]
+# models = [AutoModelForSequenceClassification.from_pretrained(model_name) for model_name in Models]
+# nlps = [pipeline('sentiment-analysis', model=model_name) for model_name in Models]
 print(5)
 # def get_score(text):
 #     scores = []
