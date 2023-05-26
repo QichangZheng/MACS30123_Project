@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=test
 #SBATCH --output=test.out
+#SBATCH --nodes=100
 #SBATCH --ntasks=100
 #SBATCH --partition=broadwl
 #SBATCH --constraint=fdr
