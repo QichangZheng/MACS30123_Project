@@ -39,12 +39,12 @@ def get_score(text):
 
 df['scores'] = df['review_body'].apply(get_score)
 print(df['scores'].tolist())
-all_data = comm.gather(df['scores'].tolist(), root=0)
-#
-if rank == 0:
-    all_scores = [score for sublist in all_data for score in sublist]
-    df = pd.read_json(filename + '.json', lines=True)[:100]
-    result_df = pd.DataFrame(all_scores, columns=['score1', 'score2', 'score3', 'score4', 'score5', 'score6'])
-    df = pd.concat([df, result_df], axis=1)
-    df.to_csv('processed_' + filename + '.csv', index=False)
-    print('Done!')
+# all_data = comm.gather(df['scores'].tolist(), root=0)
+# #
+# if rank == 0:
+#     all_scores = [score for sublist in all_data for score in sublist]
+#     df = pd.read_json(filename + '.json', lines=True)[:100]
+#     result_df = pd.DataFrame(all_scores, columns=['score1', 'score2', 'score3', 'score4', 'score5', 'score6'])
+#     df = pd.concat([df, result_df], axis=1)
+#     df.to_csv('processed_' + filename + '.csv', index=False)
+#     print('Done!')
