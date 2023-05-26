@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=test
 #SBATCH --output=test.out
-#SBATCH --ntasks=100
+#SBATCH --ntasks=4
 #SBATCH --partition=broadwl
 #SBATCH --constraint=fdr
 #SBATCH --account=macs30123
@@ -14,4 +14,4 @@ module load python/anaconda-2021.05
 #module load cuda
 module load intelmpi/2018.2.199+intel-18.0
 
-mpirun -n 10 python3 process.py > test.out
+mpirun -n 4 python3 process.py > test.out
