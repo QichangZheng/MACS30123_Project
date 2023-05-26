@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=test
 #SBATCH --output=test.out
+#SBATCH --mem-per-cpu=8G
 #SBATCH --nodes=40
 #SBATCH --ntasks=40
 #SBATCH --partition=broadwl
